@@ -1,0 +1,81 @@
+Beskrivelse av feltene for massivuttrekk adresse.
+
+Bruk av Excel mot dataene i CSV-filene:
+Enkelt kolonner i CSV-filen kan bli tolket feil av Excel hvis man velger CSV-fil fra fil-utforsker.
+Eksempel på dette er felter med ledende nuller, som kommunenr, som vil miste ledende nuller.
+Felter med Æ, Ø og Å og samiske tegn vil også bli feil fordi Excel benytter feil tegnsett, eksempel på dette er bruksnavn.
+Derfor må man importere CSV-filen fra Excel for at dataene skal bli korrekt.
+- Velg i meny: Data -> Fra tekst
+- Velg fil og trykk Importer, deretter Neste
+- Velg Filopprinnelse: 65001 Unicode (UTF-8), deretter Neste
+- Velg kun semikolon som skilletegn, deretter Neste
+- Kommunenr velges som tekst-felt (ikke standard)
+- Velg Fullfør og velg åpne i nytt regneark
+
+Alle dataene beskrevet nedenfor kan utleveres etter paragraf 13.
+
+Kolonnetekst               Beskrivelse
+----------------------------------------------------------------------------------------------------------------------
+ADRESSEID;                 Unik identifikasjon for adressen. Skal kun benyttes for kobling av data i CSV-filer.
+TYPE;                      Kan være en av følgende verdier:
+                              Vegadresse
+                              Matrikkeladresse
+KOMMUNENR;                 Kommunenummer
+ADRESSEKODE;               Adressekode
+ADRESSENAVN;               Adressenavn
+KORTADRESSENAVN;           Kort adressenavn
+NR;                        Nummer, del av adressenummer
+BOKSTAV;                   Bokstav, del av adressenummer
+GARDSNR;                   Gårdsnummer
+BRUKSNR;                   Bruksnummer
+FESTENR;                   Festenummer
+SEKSJONSNR;                Seksjonsnummer
+UNDERNR;                   Undernummer
+KORTADRESSETILLEGGSNAVN;   Kort adressetilleggsnavn
+TILLEGGSNAVNKILDEKODE;     Kodeverdi for AdressetilleggsnavnKildeKode. Verdiene er:
+                             (tom) (blank)
+                              KE   Krevd av eier
+                              AE   Anmodet av hjemmelshaver
+                              TK   Tildelt av kommunen
+                              MA   Matrikkeladressenavn
+TILLEGGSNAVNKILDENAVN;     Beskrivelse til AdressetilleggsnavnKildeKode, se over
+KOORDINATSYSTEMKODE;       Sosikoden for koordinatsystemet. Verdiene er:
+                               1   NGO1948 Gauss-K. Akse 1
+                               2   NGO1948 Gauss-K. Akse 2
+                               3   NGO1948 Gauss-K. Akse 3
+                               4   NGO1948 Gauss-K. Akse 4
+                               5   NGO1948 Gauss-K. Akse 5
+                               6   NGO1948 Gauss-K. Akse 6
+                               7   NGO1948 Gauss-K. Akse 7
+                               8   NGO1948 Gauss-K. Akse 8
+                               9   NGO1948 Geografisk
+                              21   EUREF89 UTM Sone 31
+                              22   EUREF89 UTM Sone 32
+                              23   EUREF89 UTM Sone 33
+                              24   EUREF89 UTM Sone 34
+                              25   EUREF89 UTM Sone 35
+                              26   EUREF89 UTM Sone 36
+                              31   ED50 UTM Sone 31
+                              32   ED50 UTM Sone 32
+                              33   ED50 UTM Sone 33
+                              34   ED50 UTM Sone 34
+                              35   ED50 UTM Sone 35
+                              36   ED50 UTM Sone 36
+                              50   ED50 Geografisk
+                              53   Møre A
+                              54   Møre B
+                              84   EUREF89 Geografisk
+                              51   NGO 56A (Møre)
+                              52   NGO 56B (Møre)
+NORD;                      Koordinatverdien for nord
+OST;                       Koordinatverdien for øst
+GRUNNKRETSNR;              Kretsnummer for grunnkrets
+GRUNNKRETSNAVN;            Navn til grunnkrets
+KIRKESOGNNR;               Kretsnummer for kirkesogn, Består av bispedømme, prosti, prestegjeld og sogn, 8 tegn
+KIRKESOGNNAVN;             Navn til kirkesogn
+TETTSTEDNR;                Kretsnummer til tettsted
+TETTSTEDNAVN;              Navn til tettsted
+VALGKRETSNR;               Kretsnummer til valgkrets
+VALGKRETSNAVN;             Navn til valgkrets
+POSTNUMMER;                Postnummer
+POSTNUMMEROMRADE;          Postnummerområde
